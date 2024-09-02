@@ -1,0 +1,33 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "target_tokens": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "target_attention_mask": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "label": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "target_embeddings": {
+      "feature": {
+        "dtype": "float32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

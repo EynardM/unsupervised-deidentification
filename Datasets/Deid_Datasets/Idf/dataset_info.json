@@ -1,0 +1,126 @@
+{
+  "builder_name": "wiki_bio",
+  "citation": "@article{DBLP:journals/corr/LebretGA16,\n  author    = {R{'{e}}mi Lebret and\n               David Grangier and\n               Michael Auli},\n  title     = {Generating Text from Structured Data with Application to the Biography\n               Domain},\n  journal   = {CoRR},\n  volume    = {abs/1603.07771},\n  year      = {2016},\n  url       = {http://arxiv.org/abs/1603.07771},\n  archivePrefix = {arXiv},\n  eprint    = {1603.07771},\n  timestamp = {Mon, 13 Aug 2018 16:48:30 +0200},\n  biburl    = {https://dblp.org/rec/journals/corr/LebretGA16.bib},\n  bibsource = {dblp computer science bibliography, https://dblp.org}\n}\n",
+  "config_name": "default",
+  "dataset_name": "wiki_bio",
+  "dataset_size": 772733229,
+  "description": "This dataset gathers 728,321 biographies from wikipedia. It aims at evaluating text generation\nalgorithms. For each article, we provide the first paragraph and the infobox (both tokenized).\nFor each article, we extracted the first paragraph (text), the infobox (structured data). Each\ninfobox is encoded as a list of (field name, field value) pairs. We used Stanford CoreNLP\n(http://stanfordnlp.github.io/CoreNLP/) to preprocess the data, i.e. we broke the text into\nsentences and tokenized both the text and the field values. The dataset was randomly split in\nthree subsets train (80%), valid (10%), test (10%).\n",
+  "download_checksums": {
+    "https://huggingface.co/datasets/wiki_bio/resolve/main/data/wikipedia-biography-dataset.zip": {
+      "num_bytes": 333998704,
+      "checksum": null
+    }
+  },
+  "download_size": 333998704,
+  "features": {
+    "target_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "input_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "target_tokens": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "target_attention_mask": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "target_embeddings": {
+      "feature": {
+        "dtype": "float32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "input_tokens": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "input_attention_mask": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "label": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "idf_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "idf_tokens": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "idf_attention_mask": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "idf_embeddings": {
+      "feature": {
+        "dtype": "float32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "https://github.com/DavidGrangier/wikipedia-biography-dataset",
+  "license": "CC BY-SA 3.0",
+  "size_in_bytes": 1106731933,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 618360823,
+      "num_examples": 582659,
+      "shard_lengths": [
+        472000,
+        110659
+      ],
+      "dataset_name": "wiki_bio"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 77151100,
+      "num_examples": 72831,
+      "dataset_name": "wiki_bio"
+    },
+    "val": {
+      "name": "val",
+      "num_bytes": 77221306,
+      "num_examples": 72831,
+      "dataset_name": "wiki_bio"
+    }
+  },
+  "supervised_keys": {
+    "input": "input_text",
+    "output": "target_text"
+  },
+  "version": {
+    "version_str": "1.2.0",
+    "major": 1,
+    "minor": 2,
+    "patch": 0
+  }
+}
